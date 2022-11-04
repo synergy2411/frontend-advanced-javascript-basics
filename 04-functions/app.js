@@ -63,18 +63,64 @@
 
 
 
-function mystry() {
-    var chooseNumber = function () {
-        return 12;
-    }
+// function mystry() {
+//     var chooseNumber = function () {
+//         return 12;
+//     }
 
-    return chooseNumber;
+//     return chooseNumber;
 
-    var chooseNumber = function () {
-        return 5;
-    }
+//     var chooseNumber = function () {
+//         return 5;
+//     }
+// }
+
+// let nestedFn = mystry();
+
+// console.log(nestedFn());                // ?
+
+
+
+
+// var x = 101;
+
+// function a() {
+//     // console.log(x);         // ?
+//     ++x;
+// }
+
+
+// a();
+
+// console.log(x);
+
+
+
+// Lexical scoping
+
+// var x = 99;
+
+// function a() {
+//     // var x = 201;
+//     function b() {
+//         // var x = 199;
+//         console.log(x)          // ?
+//     }
+//     b()
+// }
+
+// a();
+
+
+
+let x = 101;
+function b() {
+    // let x = 198;
+    console.log(x);     // ?
+}
+function a() {
+    let x = 99;
+    b()
 }
 
-let nestedFn = mystry();
-
-console.log(nestedFn());                // ?
+a();    
