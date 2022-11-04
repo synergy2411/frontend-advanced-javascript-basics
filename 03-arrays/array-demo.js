@@ -181,7 +181,7 @@ let movies = [
 // let position = ratings.findIndex(function (value) {
 //     return value > 4
 // })
-// console.log(position);      // ? 
+// console.log(position);      // ?
 
 
 
@@ -249,15 +249,7 @@ let movies = [
 
 // reduce
 
-let ratings = [2, 3, 5, 3, 4, 2, 5, 1];
-
-let total = ratings.reduce(function (prev, curr) {
-    return prev += curr;
-})
-
-let avgRating = total / ratings.length
-
-console.log(avgRating);
+// let ras
 
 // let result = ratings.reduce(function (prevValue, currValue) {
 //     return prevValue -= currValue;

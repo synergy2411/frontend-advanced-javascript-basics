@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Challenge 02</title>
+  </head>
+  <body>
+    <h1>Coding Challenge Part 01 - Challenge 04</h1>
+
+    <script>
+      let billAmount = 275;
+      //   let billAmount = 40;
+      //   let billAmount = 430;
+
+      let tip =
+        billAmount <= 300 && billAmount >= 50
+          ? billAmount * 0.15
+          : billAmount * 0.2;
+
+      console.log(
+        `The bill was $${billAmount}, the tip was $${tip} and the total value $${
+          billAmount + tip
+        }`
+      );
+    </script>
+  </body>
+</html>

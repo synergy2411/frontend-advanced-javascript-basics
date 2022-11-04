@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Challenge 02</title>
+  </head>
+  <body>
+    <h1>Coding Challenge Part 01 - Challenge 03</h1>
+
+    <script>
+      // TEST DATA 1
+      let scoreDolphins = [96, 108, 89];
+      let scoreKoalas = [88, 91, 110];
+
+      // TEST DATA 2
+      //   let scoreDolphins = [97, 112, 101];
+      //   let scoreKoalas = [109, 95, 123];
+
+      // TEST DATA 3
+      //   let scoreDolphins = [97, 112, 101];
+      //   let scoreKoalas = [109, 95, 106];
+
+      let totalScoreDolphins = scoreDolphins.reduce(function (prev, curr) {
+        return (prev += curr);
+      });
+      let avgScoreDolphins = totalScoreDolphins / scoreDolphins.length;
+
+      let totalScoreKoalas = scoreKoalas.reduce(function (prev, curr) {
+        return (prev += curr);
+      });
+      let avgScoreKoalas = totalScoreKoalas / scoreKoalas.length;
+
+      if (avgScoreDolphins > avgScoreKoalas) {
+        if (avgScoreDolphins >= 100) {
+          console.log("Dolphins wins");
+        } else {
+          console.log("No Team wins");
+        }
+      } else if (avgScoreDolphins < avgScoreKoalas) {
+        if (avgScoreDolphins >= 100) {
+          console.log("Koalas wins");
+        } else {
+          console.log("No Team wins");
+        }
+      } else {
+        console.log("No Team wins");
+      }
+    </script>
+  </body>
+</html>
