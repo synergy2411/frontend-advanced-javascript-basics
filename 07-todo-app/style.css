@@ -2,15 +2,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Pacifico", cursive;
 }
 body {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "Pacifico", cursive;
   background-color: #333;
   color: #ffd43b;
 }
 .container {
-  max-width: 400px;
-  margin: 0 auto;
+  max-width: 600px;
+  margin: 20px auto;
   text-align: center;
 }
 header {
@@ -18,6 +19,7 @@ header {
 }
 header h1 {
   font-size: 5rem;
+  font-family: "Great Vibes";
 }
 form {
   display: flex;
@@ -36,6 +38,7 @@ form .txtAddItem {
   font-style: italic;
   transition: all 0.5s ease;
   border-radius: 8px;
+  border: none;
 }
 form .txtAddItem:hover {
   box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.5);
@@ -45,9 +48,10 @@ form .btnAddItem {
   width: 25%;
   padding: 6px 12px;
   border: none;
-  background-color: darkgrey;
+  background-color: rgb(138, 136, 136);
   color: #fff;
   font-weight: 700;
+  font-size: 1.2rem;
   transition: all 0.2s ease;
   border-radius: 8px;
 }
@@ -65,27 +69,51 @@ form .btnAddItem:hover {
   list-style: none;
   margin-bottom: 8px;
   padding: 10px 15px;
-  text-transform: uppercase;
-  background-color: #ffd43b;
+  /* text-transform: uppercase; */
+  background-color: #f3e3a8;
   color: #333;
   border-radius: 12px;
   cursor: pointer;
   transition: all 0.2s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-item p {
+  font-size: 1.4em;
+  font-weight: bold;
 }
 
 .list-item:hover {
-  box-shadow: inset 0 0 20px rgba(10, 10, 20, 0.5);
+  box-shadow: inset 0 0 50px #fa1c0380;
 }
 
 .list-item button {
-  float: right;
+  /* float: right; */
+  display: block;
   border: none;
   padding: 5px 10px;
   border-radius: 5px;
   background-color: salmon;
   transition: all 0.2s ease;
+  font-size: 0.6rem;
+  font-weight: 700;
 }
 
 .list-item button:hover {
   background-color: red;
+  color: #fff;
+}
+
+input.checkbox {
+  width: 18px;
+  height: 18px;
+  background-color: red;
+  color: black;
+}
+
+.list-item div {
+  display: flex;
+  align-items: center;
 }
