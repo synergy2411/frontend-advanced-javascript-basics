@@ -134,3 +134,43 @@
 // call, apply, bind -> change the function ‘this’ context
 
 
+
+
+function getDetails(lang, options) {
+    if (lang === "Spanish") {
+        return "Hola " + this.firstName + ", " + this.lastName;
+    } else {
+        return "Hello " + this.firstName + ", " + this.lastName;
+    }
+}
+
+let userOne = {
+    firstName: "John",
+    lastName: "Doe"
+}
+
+let userTwo = {
+    firstName: "Jenny",
+    lastName: "Doe"
+}
+
+// bind : returns the bounded function with new object
+// let boundedFn1 = getDetails.bind(userOne)
+// let boundedFn2 = getDetails.bind(userTwo)
+
+// console.log(boundedFn1())
+// console.log(boundedFn2())
+
+
+// call : calls function immediately with new context
+// - supply arguments as individual parameters
+
+console.log("CALL :", getDetails.call(userOne, "English", true))
+console.log("CALL :", getDetails.call(userTwo, "Spanish", false))
+
+
+// apply : calls funtion immediately with new context
+// - supply arguments as an Array
+
+// console.log("APPLY : ", getDetails.apply(userOne, ["Spanish", true]))
+// console.log("APPLY : ", getDetails.apply(userTwo, ["English", false]))
